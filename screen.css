@@ -376,15 +376,27 @@ margin: 5% auto;
 .finance .flexbox{
   
   margin-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .finance form input{
   margin-top: 15px;
-}
 }
 
 
@@ -509,8 +521,6 @@ margin: 5% auto;
   -webkit-border-radius: 0.625em;
     -moz-border-radius: 0.625em;
   border:0.0625em solid transparent;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: #DDD;
   font-size: inherit;
@@ -578,10 +588,22 @@ margin: 5% auto;
 margin: 0 auto;}
 
 .finance .flexbox{
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 
 }
@@ -688,12 +710,14 @@ header{
     width:100%;
   }
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.section:nth-of-type(2) { order: 1; }
+.section:nth-of-type(2) { -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
   
   .finance .flexbox{
     width: 90%;
     margin: 0 auto;
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 
   .finance #price{
@@ -764,4 +788,3 @@ header{
     width: 1400px;
   }
 }
-
